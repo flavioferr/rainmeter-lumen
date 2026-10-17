@@ -1,0 +1,5 @@
+# Arquivos de skin do Rainmeter sao UTF-16 LE: mantem os bytes exatamente como estao
+*.ini -text
+*.inc -text
+*.lua text eol=crlf
+*.png binary
