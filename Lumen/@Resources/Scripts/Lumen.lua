@@ -25,7 +25,7 @@ function Toggle(key, name)
 	if on then
 		SKIN:Bang('!DeactivateConfig', config)
 	else
-		SKIN:Bang('!ActivateConfig', config, name .. '.ini')
+		SKIN:Bang('!ActivateConfig', config, name .. ((SKIN:GetVariable('Lang') == 'en') and '_en.ini' or '.ini'))
 	end
 	write(key, on and 0 or 1)
 	SKIN:Bang('!Refresh')

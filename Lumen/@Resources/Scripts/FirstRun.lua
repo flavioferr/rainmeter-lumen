@@ -38,7 +38,7 @@ local function run()
 		if name then
 			local config = root .. '\\' .. name
 			if config ~= current then
-				SKIN:Bang('!ActivateConfig', config, name .. '.ini')
+				SKIN:Bang('!ActivateConfig', config, name .. ((SKIN:GetVariable('Lang') == 'en') and '_en.ini' or '.ini'))
 			end
 			SKIN:Bang('!Move', coord(x, w, x0), coord(y, h, y0), config)
 		end
